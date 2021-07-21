@@ -1,25 +1,24 @@
 <html>
 
 <head>
-  <link type="text/css" rel="stylesheet" media="all" href="dist/styles/h5p.css" />
+  <link type="text/css" rel="stylesheet" media="all" href="/dist/styles/h5p.css" />
   <meta charset="utf-8" />
-  <script type="text/javascript" src="dist/main.bundle.js"></script>
-
-  <script type="text/javascript">
-    (function($) {
-        $(function() {
-            $('.h5p-container').h5p({
-                frameJs: '/dist/frame.bundle.js',
-                frameCss: '/dist/styles/h5p.css',
-                h5pContent: '/getting-started-with-undergraduate-research-at-ucla-slides-1535'
-            });
-        });
-    })(H5P.jQuery);
-  </script>
+  <script type="text/javascript" src="/dist/main.bundle.js"></script>
 </head>
 
 <body>
   <div id="h5p-container"></div>
+
+  <script type="text/javascript">
+    const {
+      H5P
+    } = H5PStandalone;
+    new H5P(document.getElementById('h5p-container'),  {
+      h5pJsonPath: 'full_workspace',
+      frameJs: '/dist/frame.bundle.js',
+      frameCss: '/dist/styles/h5p.css'
+    });
+  </script>
 </body>
 
 </html>
