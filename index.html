@@ -9,15 +9,14 @@
 <body>
   <div id="h5p-container"></div>
 
-  <script type="text/javascript">
-    const {
-      H5P
-    } = H5PStandalone;
-    new H5P(document.getElementById('h5p-container'),  {
-      h5pJsonPath: '/h5p-test',
-      frameJs: '/dist/frame.bundle.js',
-      frameCss: '/dist/styles/h5p.css'
-    });
+  <script type="text/javascript" src="/dist/main.bundle.js">
+  const el = document.getElementById('h5p-container');
+  const options = {
+    h5pJsonPath:  '/h5p-test',
+    frameJs: '/dist/frame.bundle.js',
+    frameCss: '/dist/styles/h5p.css',
+  }
+  new H5PStandalone.H5P(el, options);  
   </script>
 </body>
 
